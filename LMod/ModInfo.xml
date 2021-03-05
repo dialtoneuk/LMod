@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <ModInfo>
+    <Name value="LMod" />
+    <Description value="Brings several new perks and changes to 7 Days To Die, requires DMT" />
+    <Author value="Lyds" />
+    <Version value="1.0.0.0" />
+    <Website value="" />
+  </ModInfo>
+  <DMT>
+    <dependencies />
+    <conflicts />
+  </DMT>
+</xml>

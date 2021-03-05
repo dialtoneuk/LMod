@@ -1,0 +1,60 @@
+﻿<config>
+	<append xpath="/progression/attributes">
+    <!--Attributes-->
+		<attribute name="LModMaster" name_key="[FF2600]LMod" desc_key="Updating your LMod Perk level will have benefits across the board!" icon="ui_game_symbol" min_level="1" max_level="10">
+			<effect_group>
+        <!--Will basically do nothing as we want to do this our selves in DMT-->
+				<passive_effect name="PlayerExpGain" operation="perc_add" value="0.00" level="1"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value="0.00" level="2"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value="0.00" level="3"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value="0.00" level="4"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value="0.00" level="5"/>	
+				<passive_effect name="PlayerExpGain" operation="perc_add" value="0.00" level="6"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value="0.00" level="7"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value="0.00" level="8"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value="0.00" level="9"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value="0.00" level="10"/>	
+				<!--names-->
+				<effect_description level="1" desc_base="Lego Hobbyist" long_desc_key="Will increase LMod gained XP by 0% as well as having mysterious bonus advantages."/>
+				<effect_description level="2" desc_base="Lego Enthusiast" long_desc_key="Will increase LMod gained XP by 10% as well as having mysterious bonus advantages."/>
+				<effect_description level="3" desc_base="Lego God" long_desc_key="Will increase LMod gained XP by 20% as well as having mysterious bonus advantages."/>
+				<effect_description level="4" desc_base="7 Days To Place" long_desc_key="Will increase LMod gained XP by 30% as well as having mysterious bonus advantages."/>
+				<effect_description level="5" desc_base="BUILD BUILD BUILD" long_desc_key="Will increase LMod gained XP by 40% as well as having mysterious bonus advantages."/>
+				<effect_description level="6" desc_base="I love to grind XP" long_desc_key="Will increase LMod gained XP by 50% as well as having mysterious bonus advantages."/>
+				<effect_description level="7" desc_base="No Life" long_desc_key="Will increase LMod gained XP by 60% as well as having mysterious bonus advantages."/>
+				<effect_description level="8" desc_base="Infinminer Elitist" long_desc_key="Will increase LMod gained XP by 70% as well as having mysterious bonus advantages."/>
+				<effect_description level="9" desc_base="Roblox Veteran" long_desc_key="Will increase LMod gained XP by 80% as well as having mysterious bonus advantages."/>
+				<effect_description level="10" desc_base="Minecraft Veteran" long_desc_key="Will increase LMod gained XP by 100% as well as having mysterious bonus advantages."/>
+			</effect_group>
+		</attribute>
+	</append>
+  
+  <!--Perks-->
+  <append xpath="/progression/perks">
+    <perk name="LModPlaceBlock" parent="LModMaster" name_key="Block Placer" desc_key="Increase the amount of XP you gain by placing unpickupable blocks." icon="ui_game_symbol_block">
+      <level_requirements level="1">
+        <requirement name="ProgressionLevel" progression_name="LModMaster" operation="GTE" value="2" desc_key="LMod lvl 2"/>
+      </level_requirements>
+      <level_requirements level="2">
+        <requirement name="ProgressionLevel" progression_name="LModMaster" operation="GTE" value="4" desc_key="LMod lvl 4"/>
+      </level_requirements>
+      <level_requirements level="3">
+        <requirement name="ProgressionLevel" progression_name="LModMaster" operation="GTE" value="6" desc_key="LMod lvl 6"/>
+      </level_requirements>
+      <level_requirements level="4">
+        <requirement name="ProgressionLevel" progression_name="LModMaster" operation="GTE" value="8" desc_key="LMod lvl 8"/>
+      </level_requirements>
+      <level_requirements level="5">
+        <requirement name="ProgressionLevel" progression_name="LModMaster" operation="GTE" value="10" desc_key="LMod lvl 10"/>
+      </level_requirements>
+      <effect_group>
+        <passive_effect name="PlayerExpGain" operation="perc_add" value="0.00" level="1,5"/>
+        <effect_description level="1" desc_base="+ 20% XP" long_desc_key="XP gained by placing unpickupable blocks increases by 20%."/>
+        <effect_description level="2" desc_base="+ 40% XP" long_desc_key="XP gained by placing unpickupable blocks increases by 40%."/>
+        <effect_description level="3" desc_base="+ 60% XP" long_desc_key="XP gained by placing unpickupable blocks increases by 60%."/>
+        <effect_description level="4" desc_base="+ 80% XP" long_desc_key="XP gained by placing unpickupable blocks increases by 80%."/>
+        <effect_description level="5" desc_base="+ 100% XP" long_desc_key="XP gained by placing unpickupable blocks increases by 100%."/>
+      </effect_group>
+    </perk>
+  </append>
+</config>
