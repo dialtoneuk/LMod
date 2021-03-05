@@ -25,7 +25,6 @@
   <ItemGroup>
     <Folder Include="Config\xUI\" />
     <Folder Include="Scripts\" />
-    <Folder Include="UIAtlases\UIAtlas\" />
   </ItemGroup>
 
 </Project>
